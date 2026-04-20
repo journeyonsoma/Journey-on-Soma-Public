@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Journey on Soma</title>
+<meta
+name="description"
+content="A minimal hub for projects in Music, Visual Arts, Development and Nature."
+/>
+<style>
+:root {
+--bg: #0d0f12;
+--card: #14181d;
+--text: #e8ecef;
+--muted: #9aa7b2;
+--line: #262d36;
+--accent: #8ee3c8;
+}
+
+* { box-sizing: border-box; }
+
+body {
+margin: 0;
+font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+background: radial-gradient(1200px 600px at 50% -10%, #1a222c 0%, var(--bg) 60%);
+color: var(--text);
+min-height: 100vh;
+}
+
+.wrap {
+max-width: 980px;
+margin: 0 auto;
+padding: 56px 24px 40px;
+}
+
+.hero {
+text-align: center;
+margin-bottom: 44px;
+}
+
+.hero h1 {
+margin: 0;
+font-size: clamp(2rem, 5vw, 3.4rem);
+font-weight: 600;
+letter-spacing: -0.03em;
+}
+
+.hero p {
+margin: 14px auto 0;
+max-width: 700px;
+color: var(--muted);
+font-size: clamp(1rem, 2vw, 1.1rem);
+line-height: 1.6;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 16px;
+}
+
+.card {
+background: color-mix(in oklab, var(--card) 92%, black);
+border: 1px solid var(--line);
+border-radius: 16px;
+padding: 20px 18px;
+text-decoration: none;
+color: inherit;
+transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+.card:hover {
+transform: translateY(-2px);
+border-color: color-mix(in oklab, var(--accent) 45%, var(--line));
+background: #171d24;
+}
+
+.card h2 {
+margin: 0 0 8px;
+font-size: 1.1rem;
+font-weight: 600;
+letter-spacing: -0.01em;
+}
+
+.card p {
+margin: 0;
+color: var(--muted);
+line-height: 1.55;
+font-size: 0.97rem;
+}
+
+.footer {
+margin-top: 34px;
+text-align: center;
+color: var(--muted);
+font-size: 0.9rem;
+}
+
+.dot {
+color: var(--accent);
+margin: 0 6px;
+}
+
+@media (max-width: 760px) {
+.wrap { padding-top: 40px; }
+.grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="hero">
+<h1>Journey on Soma</h1>
+<p>
+A living collection of projects across creativity, technology and nature.
+</p>
+</section>
+
+<section class="grid" aria-label="Project Categories">
+<a class="card" href="/music">
+<h2>Music</h2>
+<p>Production, sound experiments, DJ sets and sonic explorations.</p>
+</a>
+
+<a class="card" href="/visual-arts">
+<h2>Visual Arts</h2>
+<p>Generative visuals, digital pieces and aesthetic research.</p>
+</a>
+
+<a class="card" href="/development">
+<h2>Development</h2>
+<p>Apps, automations, AI workflows and open technical builds.</p>
+</a>
+
+<a class="card" href="/nature">
+<h2>Nature</h2>
+<p>Conservation, field notes, regenerative ideas and ecosystem work.</p>
+</a>
+</section>
+
+<div class="footer">
+journeyonsoma.com <span class="dot">•</span> ongoing projects
+</div>
+</main>
+</body>
+</html>
